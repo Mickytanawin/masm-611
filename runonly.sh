@@ -68,6 +68,7 @@ function try_conv2cp437() {
     rm "$script_loc/iconverr.txt" # Remove error file
     exit 1
   fi
+  rm "$script_loc/iconverr.txt"
   unix2dos -ascii "$dest_file" > /dev/null 2>&1 # Only change \n to \r\n (-ascii Flag)
 }
 
